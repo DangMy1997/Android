@@ -1,4 +1,4 @@
-package com.example.tuan02_bai05;
+package com.example.tuan02_bai03;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.tuan02_bai05", appContext.getPackageName());
+        assertEquals("com.example.tuan02_bai03", appContext.getPackageName());
     }
 }
