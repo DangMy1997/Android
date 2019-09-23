@@ -1,8 +1,6 @@
 package com.example.tuan02_m2_bai04;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
+import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,11 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ListActivity {
 
     private TextView txtName, lbKQ;
     private Button btn;
@@ -30,7 +27,6 @@ public class MainActivity extends Activity {
         txtName = findViewById(R.id.txtName);
         lbKQ = findViewById(R.id.lbKQ);
         btn = findViewById(R.id.btn);
-        lvXem = findViewById(R.id.lvXem);
 
         list = new ArrayList<>();
 
@@ -53,7 +49,7 @@ public class MainActivity extends Activity {
         lvXem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                lbKQ.setText("Position: " + i + " - Value: " + adapterView.getItemAtPosition(i));
+                lbKQ.setText("Position: " + i + " - Value: " + adapterView.getList);
             }
         });
     }
